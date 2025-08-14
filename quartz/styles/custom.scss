@@ -1,3 +1,68 @@
 @use "./base.scss";
 
 // put your custom CSS here!
+
+// 글 제목과 메타 정보 사이의 간격을 늘립니다
+.article-title {
+  margin-bottom: 1.5rem !important; // 기존 0에서 1.5rem으로 증가
+}
+
+.content-meta {
+  margin-top: 1rem !important; // 기존 0에서 1rem으로 증가
+}
+
+// 페이지 헤더 전체의 간격을 조정합니다
+.page-header {
+  margin-bottom: 2rem;
+}
+
+// 푸터 링크에 새 탭 아이콘을 추가합니다
+footer a[href^="http"]::after {
+  content: " ↗";
+  font-size: 0.8em;
+  opacity: 0.7;
+}
+
+// 외부 링크를 새 탭에서 열리도록 하는 JavaScript 스타일
+footer a[href^="http"] {
+  cursor: pointer;
+}
+
+// h3 마크다운 텍스트에 보라색 적용
+.content h3 {
+  color: rgb(124, 58, 237) !important; // 보라색 적용
+  font-weight: 600; // 글씨 굵기 조정
+}
+
+// 사이드바에 프로필 이미지 추가 (크기를 200x200으로 증가)
+.left.sidebar .page-title::after {
+  content: "";
+  display: block;
+  width: 200px; // 120px에서 200px로 증가
+  height: 200px; // 120px에서 200px로 증가
+  margin: 1rem auto;
+  background-image: url('../static/lotr.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 12px; // 모서리에 적당한 radius 적용
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); // 그림자 효과 추가
+  transition: transform 0.2s ease, box-shadow 0.2s ease; // 부드러운 애니메이션
+}
+
+// 호버 효과 추가
+.left.sidebar .page-title::after:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+// Search 버튼이 더 넓어지도록 조정 (ReaderMode 제거로 인한 공간 활용)
+.left.sidebar .search {
+  min-width: fit-content;
+  max-width: 18rem; // 기존 14rem에서 18rem으로 증가
+}
+
+.left.sidebar .search .search-button {
+  width: 100%;
+  min-width: 200px; // 최소 너비 설정
+}

@@ -8,8 +8,7 @@ export const sharedPageComponents: SharedLayout = { // 공유 페이지 컴포�
   afterBody: [], // 본문 후 컴포넌트 배열을 빈 배열로 설정합니다
   footer: Component.Footer({ // 푸터 컴포넌트를 설정합니다
     links: { // 푸터 링크들을 설정합니다
-      GitHub: "https://github.com/jackyzha0/quartz", // GitHub 링크
-      "Discord Community": "https://discord.gg/cRFFHYye7t", // Discord 커뮤니티 링크
+      LinkedIn: "https://www.linkedin.com/in/%EA%B0%95%ED%98%84-%EC%98%A4-37584015a/", // LinkedIn 링크
     },
   }),
 }
@@ -35,7 +34,7 @@ export const defaultContentPageLayout: PageLayout = { // 기본 콘텐츠 페이
           grow: true, // 남은 공간을 차지하도록 설정
         },
         { Component: Component.Darkmode() }, // 다크모드 컴포넌트
-        { Component: Component.ReaderMode() }, // 읽기 모드 컴포넌트
+        // ReaderMode 컴포넌트 제거됨
       ],
     }),
     Component.Explorer(), // 탐색기 컴포넌트

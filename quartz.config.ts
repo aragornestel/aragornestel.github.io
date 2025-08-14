@@ -8,7 +8,7 @@ import * as Plugin from "./quartz/plugins" // 모든 플러그인을 가져옵�
  */
 const config: QuartzConfig = { // Quartz 설정 객체를 정의합니다
   configuration: { // 기본 설정 섹션
-    pageTitle: "Quartz 4", // 페이지 제목을 설정합니다
+    pageTitle: "🍕Aragornestel", // 페이지 제목을 설정합니다
     pageTitleSuffix: "", // 페이지 제목 접미사를 설정합니다
     enableSPA: true, // SPA(단일 페이지 애플리케이션) 기능을 활성화합니다
     enablePopovers: true, // 팝오버 기능을 활성화합니다
